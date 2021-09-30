@@ -204,28 +204,29 @@ async function getNFTs() {
 
 }
 
-function checkWidth() {
-    if (windowsize <= 767) {
-        $('.forge-owned-nfts').css('grid-template-columns', '1fr');  
-    }
-    if (windowsize <= 991 && windowsize >= 768) {
-        if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
-        if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
-    }
-    if (windowsize <= 1440 && windowsize >= 992) {
-        if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
-        if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
-        if (userEthNFTs.total == 3) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr'); };
-    }
-    if (windowsize >= 1440) {
-        if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
-        if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
-        if (userEthNFTs.total == 3) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr'); };
-        if (userEthNFTs.total == 4) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr 1fr'); };
-    }
-}
 
-$(document).ready(function() {
+
+$(document).ready(function () {
+    function checkWidth() {
+        if (windowsize <= 767) {
+            $('.forge-owned-nfts').css('grid-template-columns', '1fr');
+        }
+        if (windowsize <= 991 && windowsize >= 768) {
+            if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
+            if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
+        }
+        if (windowsize <= 1440 && windowsize >= 992) {
+            if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
+            if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
+            if (userEthNFTs.total == 3) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr'); };
+        }
+        if (windowsize >= 1440) {
+            if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
+            if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
+            if (userEthNFTs.total == 3) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr'); };
+            if (userEthNFTs.total == 4) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr 1fr'); };
+        }
+    }
     checkWidth();
     $(window).resize(checkWidth);
 });
