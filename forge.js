@@ -1,6 +1,10 @@
 
 //Review Forge Submission
 
+var $window = $(window);
+var windowsize = $window.width();
+var selectedNFTs = [];
+
 function reviewForgeSubmission() {
     var forgeEmail = document.getElementById("forgeEmail").value;
     var forgeFirstName = document.getElementById("forgeFirstName").value;
@@ -44,12 +48,7 @@ $(document).on('click', '.forge-review-next', function () {
     reviewForgeSubmission();
 });
 
-
-// Forge form handler
-
-
 //Select NFTs
-var selectedNFTs = [];
 function selectNFT() {
     //var selectedNFTs = [];
     $('.forge-selectednfts-next').hide();
@@ -202,8 +201,6 @@ async function getNFTs() {
     }
 
     function checkWidth() {
-        var $window = $(window);
-        var windowsize = $window.width();
         if (windowsize <= 767) {
             $('.forge-owned-nfts').css('grid-template-columns', '1fr');  
         }
@@ -242,7 +239,7 @@ function fixURL(url) {
     }
 }
 
-//getNFTs();
+
 selectNFT();
 
 
