@@ -223,10 +223,10 @@ async function getNFTs() {
 
 }
 
-$(document).ready(function() {
-    checkWidth();
-    //$(window).resize(checkWidth);
-});
+// $(document).ready(function() {
+//     checkWidth();
+//     $(window).resize(checkWidth);
+// });
 
 
 
