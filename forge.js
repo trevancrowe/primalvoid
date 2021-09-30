@@ -217,7 +217,7 @@ async function getNFTs() {
             if (userEthNFTs.total == 1) { $('.forge-owned-nfts').css('grid-template-columns', '1fr'); };
             if (userEthNFTs.total == 2) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr'); };
             if (userEthNFTs.total == 3) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr'); };
-            if (userEthNFTs.total == 3) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr 1fr'); };
+            if (userEthNFTs.total == 4) { $('.forge-owned-nfts').css('grid-template-columns', '1fr 1fr 1fr 1fr'); };
         }
     }
 
@@ -225,7 +225,7 @@ async function getNFTs() {
 
 $(document).ready(function() {
     checkWidth();
-    $(window).resize(checkWidth);
+    //$(window).resize(checkWidth);
 });
 
 
